@@ -1,0 +1,103 @@
+nav {
+    background: #fff;
+    scroll-behavior: smooth;
+    transition: all 0.4s ease-in-out;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    color: #212121;
+}
+.first-line-nav{
+    left: 0;
+}
+
+.short-links-nav{
+    justify-content: flex-start;
+    background: inherit;
+    padding: 4px 0;
+    right: 0;
+    
+}
+.short-links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;  
+}
+
+.short-links{ 
+    width: 100%;
+    margin: 0;
+    width: 100%;
+    
+}
+.short-links a{
+    color: #212121;
+    font-size: 11px;
+    padding: 0 8px;
+    font-weight: light;
+    text-transform: lowercase;
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+.nav-section {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.navbar-section>.navbrand {
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.navbar-section {
+    width: 100%;
+    display: flex;
+    padding: 8px 0;
+    justify-content: space-between;
+    border-top: 1px solid rgb(240, 237, 237);
+    border-bottom: 1px solid rgb(240, 237, 237);
+    box-shadow: 0 -2px 3px -3px grey inset;
+}
+
+.navbar-action {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-size: 21px;
+}
+
+
+
+.navbar-section>.nav-help {
+    width: 30%;
+}
+
+.nav-help form {
+    width: 100%;
+}
+
+.nav-help {
+    display: flex;
+}
+
+.nav-help button {
+    outline: none;
+    border: none;
+    background: inherit;
+    padding: 0 10px;
+}
+
+
+.navbrand-logo {
+    font-family: 'Sacramento', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    margin: auto;
+}
