@@ -1,9 +1,12 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiChevronsDown } from "react-icons/bi";
 import Featured from "./Featured";
-const Home = ({}) => {
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+const Home = ({products}) => {
   return (
     <div className="home">
+      <Navbar />
       <div className="container-fluid promotion mb-2">
         <h6>New arrivals this summer</h6>
         <div className="promotion-link">
@@ -12,8 +15,8 @@ const Home = ({}) => {
           </a>
         </div>
       </div>
-      <div className="banner bg-img img-fluid">
-        <img src="newww.jpg" alt="" className="img-fluid" />
+      <div className="banner bg-img img-fluid mb-2">
+        <img src="/images/newww.jpg" alt="" className="img-fluid" />
         <div className="banner-content p-3">
           <div className="inner-banner">
             <div className="banner-text-desktop container-fluid mb-3">
@@ -51,8 +54,23 @@ const Home = ({}) => {
           </div>
         </div>
       </div>
-      <div className="container-fluid-medium">
-        <Featured />
+      <div className="mb-2 container-fluid featured" id="featured">
+        <div className="featured-caption justify-content-between align-end d-flex">
+          <div className="trend-buttons">
+            <button className="new btn bg-dark text-light p-1">
+              New Arrivals
+            </button>
+            <button className="trending btn bg-tertiary p-1">
+              What's Trending
+            </button>
+          </div>
+          <div className="view">
+            <Link className="text-dark" to="/featured">
+              View All
+            </Link>
+          </div>
+        </div>
+        <Featured products={products} />
       </div>
     </div>
   );

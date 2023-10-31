@@ -1,8 +1,9 @@
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
-import { AiOutlineShopping } from "react-icons/ai";
+// import { AiOutlineShopping } from "react-icons/ai";
 import { SlBasket } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import Signup from "./signup";
 
 const Navbar = () => {
   return (
@@ -21,7 +22,30 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/signup">join us</a>
+                  <Link
+                    type="button"
+                    className="pop-up"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    join us
+                  </Link>
+                  <div
+                    class="modal fade "
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pop-up">
+                      <div class="modal-content">
+                        {/* <div class="modal-header pop-up-header">
+                          
+                        </div> */}
+                        <Signup />
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li>
                   <a href="/signin">sign in</a>
@@ -102,15 +126,19 @@ const Navbar = () => {
                       </ul>
                     </li> */}
                     <li className="nav-item">
-                      <Link className="nav-link">Brides</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/trending" className="nav-link" href="#featured">
-                        Featured
+                      <Link className="nav-link" to="/brides">
+                        Brides
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/trending" className="nav-link">Trending</Link>
+                      <a className="nav-link" href="#featured">
+                        Featured
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/trending" className="nav-link">
+                        Trending
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -131,7 +159,9 @@ const Navbar = () => {
                   </form>
                   <button>
                     <span>
-                      <AiOutlineUser />
+                      <Link to="/user">
+                        <AiOutlineUser />
+                      </Link>
                     </span>
                   </button>
                   <button>
