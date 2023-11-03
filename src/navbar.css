@@ -112,7 +112,7 @@ nav {
 .pop-up {
     max-width: 350px;
     /* overflow: hidden; */
-    /* object-fit: contain; */
+    object-fit: contain;
     /* position: fixed;
     left: 20%; */
     font-family: 'Roboto', sans-serif;
@@ -136,6 +136,7 @@ nav {
     /* background-color: #1a1a1a; */
     /* background: #333; */
     color: #212121;
+    /* color: #f25939; */
     border: 1px solid #333;
 }
 
